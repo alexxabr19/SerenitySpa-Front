@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Sedes | SerenitySpa</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/components.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="container">
+            <a href="../index.html" class="brand">SerenitySpa</a>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="section-heading">
+            <h1>Gestión de sedes</h1>
+            <p>Administra las sedes de SerenitySpa.</p>
+        </section>
+
+        <!-- Formulario -->
+        <section class="panel">
+            <h2>Registrar sede</h2>
+
+            <form id="formSede">
+
+                <div class="form-grid">
+
+                    <div>
+                        <label for="nombre">Nombre de la sede</label>
+                        <input type="text" id="nombre" class="form-control"
+                               placeholder="Nombre de la sede" required>
+                    </div>
+
+                    <div>
+                        <label for="direccion">Dirección</label>
+                        <input type="text" id="direccion" class="form-control"
+                               placeholder="Dirección" required>
+                    </div>
+
+                    <div>
+                        <label for="telefono">Teléfono</label>
+                        <input type="text" id="telefono" class="form-control"
+                               placeholder="Teléfono" required>
+                    </div>
+
+                    <div>
+                        <label for="ciudad">Ciudad</label>
+                        <input type="text" id="ciudad" class="form-control"
+                               placeholder="Ciudad" required>
+                    </div>
+
+                </div>
+
+                <div class="mt-3">
+                    <button type="submit" id="btnGuardar" class="btn btn-primary">
+                        Guardar sede
+                    </button>
+
+                    <button type="button" id="btnCancelar" class="btn btn-secondary">
+                        Limpiar
+                    </button>
+                </div>
+
+            </form>
+
+            <div id="mensaje" class="message mt-3"></div>
+        </section>
+
+        <!-- Tabla de sedes -->
+        <section class="panel mt-4">
+
+            <div class="section-heading">
+                <h2>Sedes registradas</h2>
+                <button id="btnListar" class="btn btn-primary">
+                    Actualizar lista
+                </button>
+            </div>
+
+            <div class="table-wrap">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Dirección</th>
+                            <th>Teléfono</th>
+                            <th>Ciudad</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tablaSedes">
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <!-- Buscar sede -->
+        <section class="panel mt-4">
+
+            <h2>Buscar sede por ID</h2>
+
+            <div class="d-flex gap-2 flex-wrap">
+                <input type="number" id="buscarId" class="form-control"
+                       placeholder="Ingrese el ID de la sede" min="1">
+
+                <button id="btnBuscar" class="btn btn-primary">
+                    Buscar
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../js/sedes.js"></script>
+
+</body>
+</html>
