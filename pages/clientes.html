@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes | SerenitySpa</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+<header class="topbar">
+    <a class="brand" href="../index.html">SerenitySpa</a>
+    <nav><a href="../index.html">Inicio</a></nav>
+</header>
+
+<main class="container">
+    <p class="eyebrow">Administración</p>
+    <h1>Clientes</h1>
+    <p class="intro">Registra y consulta la información de los clientes.</p>
+
+    <section class="panel">
+        <h2>Registrar cliente</h2>
+        <form id="formCliente" class="form-grid">
+            <label>ID (solo para actualizar)
+                <input id="idCliente" name="idCliente" type="number">
+            </label>
+            <label>Nombre
+                <input id="nombre" name="nombre" type="text" required>
+            </label>
+            <label>Apellido
+                <input id="apellido" name="apellido" type="text" required>
+            </label>
+            <label>Correo
+                <input id="correo" name="correo" type="email" required>
+            </label>
+            <label>Teléfono
+                <input id="telefono" name="telefono" type="tel">
+            </label>
+            <button class="btn btn-primary" type="submit">Guardar cliente</button>
+        </form>
+    </section>
+
+    <div id="mensaje" class="message" role="status"></div>
+
+    <section class="panel">
+        <div class="section-heading">
+            <h2>Registros</h2>
+            <button id="btnRecargar" class="btn btn-secondary" type="button">Actualizar lista</button>
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead id="tablaHead"></thead>
+                <tbody id="tablaBody"></tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<script type="module" src="../js/clientes.js"></script>
+</body>
+</html>
