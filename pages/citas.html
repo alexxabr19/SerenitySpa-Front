@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citas | SerenitySpa</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+<header class="topbar">
+    <a class="brand" href="../index.html">SerenitySpa</a>
+    <nav><a href="../index.html">Inicio</a></nav>
+</header>
+<main class="container">
+    <p class="eyebrow">Administración</p>
+    <h1>Citas</h1>
+    <p class="intro">Agenda, consulta, actualiza y cancela citas del spa.</p>
+    <section class="panel">
+        <h2>Agendar o actualizar cita</h2>
+        <form id="formCita" class="form-grid">
+            <label>ID de cita (solo para actualizar)
+                <input id="idCita" name="idCita" type="number">
+            </label>
+            <label>Fecha
+                <input id="fecha" name="fecha" type="date" required>
+            </label>
+            <label>Hora de inicio
+                <input id="horaInicio" name="horaInicio" type="time" required>
+            </label>
+            <label>Estado
+                <input id="estado" name="estado" type="text" required>
+            </label>
+            <label>ID del cliente
+                <input id="idCliente" name="idCliente" type="number" required>
+            </label>
+            <label>ID del servicio
+                <input id="idServicio" name="idServicio" type="number" required>
+            </label>
+            <label>ID del empleado
+                <input id="idEmpleado" name="idEmpleado" type="number" required>
+            </label>
+            <label>ID de la sede
+                <input id="idSede" name="idSede" type="number" required>
+            </label>
+            <button class="btn btn-primary" type="submit">Guardar cita</button>
+        </form>
+    </section>
+    <div id="mensaje" class="message" role="status"></div>
+    <section class="panel">
+        <div class="section-heading">
+            <h2>Registros</h2>
+            <button id="btnRecargar" class="btn btn-secondary" type="button">Actualizar lista</button>
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead id="tablaHead"></thead>
+                <tbody id="tablaBody"></tbody>
+            </table>
+        </div>
+    </section>
+</main>
+<script type="module" src="../js/citas.js"></script>
+</body>
+</html>
